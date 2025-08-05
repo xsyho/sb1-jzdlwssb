@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 24, 24, 27;
+  --background-end-rgb: 24, 24, 27;
+  
+  --primary: 230, 57, 70;
+  --primary-foreground: 255, 255, 255;
+  
+  --secondary: 227, 181, 5;
+  --secondary-foreground: 24, 24, 27;
+  
+  --accent: 255, 255, 255;
+  --accent-foreground: 24, 24, 27;
+  
+  --destructive: 239, 68, 68;
+  --destructive-foreground: 255, 255, 255;
+  
+  --muted: 39, 39, 42;
+  --muted-foreground: 161, 161, 170;
+  
+  --card: 24, 24, 27;
+  --card-foreground: 255, 255, 255;
+  
+  --popover: 24, 24, 27;
+  --popover-foreground: 255, 255, 255;
+  
+  --border: 39, 39, 42;
+  --input: 39, 39, 42;
+  
+  --radius: 0.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-900 text-white;
+    background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-oswald font-bold;
+  }
+}
+
+.animate-in {
+  animation: animateIn 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes animateIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+.text-outline {
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-10px, 15px) rotate(2deg); }
+  50% { transform: translate(5px, -10px) rotate(-2deg); }
+  75% { transform: translate(10px, 5px) rotate(1deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(15px, -10px) rotate(-2deg); }
+  50% { transform: translate(-5px, 15px) rotate(2deg); }
+  75% { transform: translate(-10px, -5px) rotate(-1deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(-15px, -5px) rotate(-1deg); }
+  50% { transform: translate(10px, 10px) rotate(1deg); }
+  75% { transform: translate(5px, -15px) rotate(-2deg); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, 10px) rotate(1deg); }
+  50% { transform: translate(-15px, -5px) rotate(-1deg); }
+  75% { transform: translate(5px, 15px) rotate(2deg); }
+}
