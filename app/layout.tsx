@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: "DeJvitsu - Profesjonalne Strony Internetowe",
+  title: "Ochraniaczenazeby.pl",
   description: "Tworzymy nowoczesne, responsywne strony internetowe i sklepy online. Profesjonalne usługi web developmentu dla Twojego biznesu.",
   keywords: 'ochraniacze na zęby, sporty walki, MMA, boks, kickboxing, BJJ, ochrona zębów',
   icons: {
